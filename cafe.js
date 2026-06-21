@@ -1,4 +1,4 @@
-/* ============================================
+ /* ============================================
    DAR NANA — interactions
    ============================================ */
 
@@ -70,14 +70,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('reserveForm');
   const formMsg = document.getElementById('formMsg');
 
-  form.addEventListener('submit', (e) => {
+  // Endpoint Formspree connecté au formulaire de réservation Dar Nana
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnjkawby';
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Démo portfolio : aucun backend connecté.
-    // En production, remplacez ce bloc par un appel fetch() vers votre serveur,
-    // ou par l'intégration WordPress (admin-ajax.php / formulaire de plugin).
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Envoi en cours...';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formMsg.textContent = 'Merci ! Votre demande a bien été reçue, nous vous recontacterons rapidement.';
+        formMsg.style.color = 'var(--mint)';
+        form.reset();
+      } else {
+        throw new Error('Erreur serveur');
+      }
+    } catch (error) {
+      formMsg.textContent = 'Une erreur est survenue. Merci de réessayer ou de nous appeler directement.';
+      formMsg.style.color = 'var(--terracotta)';
+    }
+
     formMsg.classList.add('is-shown');
-    form.reset();
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
 
     setTimeout(() => formMsg.classList.remove('is-shown'), 6000);
   });
