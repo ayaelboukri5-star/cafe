@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dar Nana — Maison de thé, Fès</title>
+<meta name="description" content="Dar Nana, maison de thé traditionnelle au cœur de la médina de Fès. Thés à la menthe, pâtisseries maison et plats marocains.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+
+ 
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="star8" viewBox="0 0 100 100">
+    <rect x="18" y="18" width="64" height="64"></rect>
+    <rect x="18" y="18" width="64" height="64" transform="rotate(45 50 50)"></rect>
+  </symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <a href="#accueil" class="nav__logo">
+    <svg class="star8"><use href="#star8"></use></svg>
+    Dar Nana
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#accueil">Accueil</a>
+    <a href="#menu">Menu</a>
+    <a href="#histoire">Histoire</a>
+    <a href="#ambiance">Ambiance</a>
+    <a href="#contact" class="btn btn--solid">Réserver</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <svg class="hero__star"><use href="#star8"></use></svg>
+    <div class="hero__content">
+      <p class="eyebrow"><svg class="star8"><use href="#star8"></use></svg> Maison de thé · Médina de Fès</p>
+      <h1>Dar Nana</h1>
+      <p class="hero__sub">Où chaque verre de thé raconte une histoire, versé haut comme le veut la tradition.</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--solid">Découvrir le menu</a>
+        <a href="#contact" class="btn">Réserver une table</a>
+      </div>
+    </div>
+    <div class="scroll-cue">
+      <span>Défiler</span>
+      <span class="scroll-cue__line"></span>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Le Rituel</p>
+        <h2>Notre Menu</h2>
+        <p>Recettes transmises de génération en génération, préparées chaque matin dans notre cuisine.</p>
+      </div>
+
+      <div class="menu__tabs reveal" role="tablist">
+        <button class="menu__tab is-active" data-tab="thes">Thés &amp; Infusions</button>
+        <button class="menu__tab" data-tab="patisseries">Pâtisseries</button>
+        <button class="menu__tab" data-tab="plats">Plats</button>
+      </div>
+
+      <div class="menu__panel is-active reveal" data-panel="thes">
+        <div class="menu__item">
+          <span class="menu__item-name">Thé à la menthe traditionnel</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">15 DH</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Thé aux amandes grillées</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">22 DH</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Thé à la rose de Kelâa</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">20 DH</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Infusion verveine &amp; citron</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">18 DH</span>
+        </div>
+      </div>
+
+      <div class="menu__panel" data-panel="patisseries">
+        <div class="menu__item">
+          <span class="menu__item-name">Cornes de gazelle (x3)</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">25 DH</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Chebakia au miel</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">20 DH</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Sellou maison</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">22 DH</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Briouates aux amandes</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">24 DH</span>
+        </div>
+      </div>
+
+      <div class="menu__panel" data-panel="plats">
+        <div class="menu__item">
+          <span class="menu__item-name">Tagine d'agneau aux pruneaux</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">95 DH</span>
+          <span class="menu__item-desc">Mijoté lentement avec amandes et cannelle</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Pastilla au poulet</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">80 DH</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Couscous royal</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">90 DH</span>
+          <span class="menu__item-desc">Disponible le vendredi</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">Harira traditionnelle</span>
+          <span class="menu__item-leader"></span>
+          <span class="menu__item-price">35 DH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="histoire">
+    <div class="wrap about__grid">
+      <div class="about__art reveal">
+        <svg class="star8"><use href="#star8"></use></svg>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow about__eyebrow">Depuis 2012</p>
+        <h2>Notre Histoire</h2>
+        <p>Dar Nana est née dans la cuisine de notre grand-mère, au fond d'un riad de la médina de Fès. Chaque après-midi, elle préparait le thé pour les voisins, les commerçants, les passants — personne ne repartait sans son verre.</p>
+        <p>Aujourd'hui, nous gardons ses recettes intactes : la même menthe fraîche du souk, le même geste pour verser le thé de haut, la même attention portée à chaque invité comme à un membre de la famille.</p>
+        <p class="about__quote">« Un thé bien versé ne se boit pas vite. »
+          <span>Nana, fondatrice</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="ambiance">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Instants</p>
+        <h2>L'Ambiance</h2>
+      </div>
+      <div class="gallery__grid reveal">
+        <div class="gallery__item gallery__item--1">
+          <svg class="star8"><use href="#star8"></use></svg>
+          <span class="gallery__caption">Le patio</span>
+        </div>
+        <div class="gallery__item gallery__item--2">
+          <svg class="star8"><use href="#star8"></use></svg>
+          <span class="gallery__caption">Service du thé</span>
+        </div>
+        <div class="gallery__item gallery__item--3">
+          <svg class="star8"><use href="#star8"></use></svg>
+          <span class="gallery__caption">Menthe fraîche</span>
+        </div>
+        <div class="gallery__item gallery__item--4">
+          <svg class="star8"><use href="#star8"></use></svg>
+          <span class="gallery__caption">Plateau de cuivre</span>
+        </div>
+        <div class="gallery__item gallery__item--5">
+          <svg class="star8"><use href="#star8"></use></svg>
+          <span class="gallery__caption">Coin lecture</span>
+        </div>
+        <div class="gallery__item gallery__item--6">
+          <svg class="star8"><use href="#star8"></use></svg>
+          <span class="gallery__caption">Pâtisseries du jour</span>
+        </div>
+      </div>
+      <p class="gallery__note">Photos à venir — remplacez ces blocs par vos propres visuels.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Nous trouver</p>
+        <h2>Réserver une table</h2>
+      </div>
+      <div class="contact__grid reveal">
+        <div>
+          <div class="info-row">
+            <h3>Adresse</h3>
+            <p>12 Derb Zellige, Médina<br>Fès, Maroc</p>
+          </div>
+          <div class="info-row">
+            <h3>Horaires</h3>
+            <p>Tous les jours — 9h00 à 23h00</p>
+          </div>
+          <div class="info-row">
+            <h3>Contact</h3>
+            <p>+212 6 00 00 00 00<br>contact@darnana.ma</p>
+          </div>
+        </div>
+
+        <form class="form-grid" id="reserveForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="guests">Nombre de personnes</label>
+              <input type="number" id="guests" name="guests" min="1" max="20" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="field">
+              <label for="time">Heure</label>
+              <input type="time" id="time" name="time" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" name="message" placeholder="Allergies, occasion spéciale..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--solid">Envoyer la demande</button>
+          <p class="form-msg" id="formMsg">Merci ! Votre demande a bien été reçue, nous vous recontacterons rapidement.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="star-divider">
+    <svg class="star8"><use href="#star8"></use></svg>
+  </div>
+  <p>© 2026 Dar Nana, Médina de Fès — Site réalisé pour portfolio démonstratif</p>
+</footer>
+
+<script src="cafe.js"></script>
+</body>
+</html>
